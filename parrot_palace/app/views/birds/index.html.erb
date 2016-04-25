@@ -1,0 +1,23 @@
+<h1>Enroll your bird today!</h1>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Species</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+<tbody>
+  <% @birds.each do |bird| %>
+    <tr>
+      <td><%= bird.id %></td>
+      <td><%= bird.name %></td>
+      <td><%= bird.species %></td>
+      <td><%= bird.age %></td>
+    </tr>
+    <% end %>
+</tbody>
+</table>
+
+<%= link_to "Sign up!", new_bird_path %>

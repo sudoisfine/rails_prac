@@ -1,0 +1,15 @@
+<h1>Add a Bird</h1>
+
+<%= form_for @bird do |bird_fields| %>
+  <%= bird_fields.label :name %>
+  <%= bird_fields.text_field :name %>
+
+  <%= bird_fields.label :species %>
+<%= bird_fields.text_field :species %>
+
+  <%= bird_fields.label :age %>
+  <%= bird_fields.number_field :age %>
+
+  <%= bird_fields.submit %>
+
+  <% end %>
