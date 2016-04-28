@@ -8,8 +8,8 @@
   </div>
 
   <div class="field form-group">
-  <%= dog_fields.label :breed %>
-  <%= dog_fields.text_field :breed, class: "form-control", placeholder: "dog breed"  %>
+  <%= dog_fields.label :breed_id %>
+  <%= dog_fields.collection_select :breed_id, Breed.all, :id, :name %>
   </div>
 
   <div class="field form-group">
