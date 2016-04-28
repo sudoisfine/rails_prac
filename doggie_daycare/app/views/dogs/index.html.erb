@@ -1,5 +1,5 @@
 <h1>Cool Dogs</h1>
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>ID</th>
@@ -16,7 +16,7 @@
       <td><%= dog.name %></td>
       <td><%= dog.breed %></td>
       <td><%= dog.age %></td>
-      <td><%= dog.owner %></td>
+      <td><%= dog.owner.try(:name) %></td>
       <td><%=link_to "show dog", dog_path(dog) %></td>
       <td><%=link_to "edit dog", edit_dog_path(dog) %></td>
       <td><%=link_to "delete", dog, method: :delete, data: {confirm: "are you sure?"} %></td>
@@ -25,4 +25,10 @@
 </tbody>
 </table>
 
+<div class = "linking">
 <%= link_to "Add a dog!", new_dog_path %>
+</div>
+<br>
+<div class = "linking">
+<%= link_to "See owner list", owners_path %>
+</div>

@@ -1,16 +1,31 @@
 <%= form_for @dog do |dog_fields| %>
+
+<form class="form-inline">
+
+  <div class="field form-group">
   <%= dog_fields.label :name %>
-  <%= dog_fields.text_field :name %>
+  <%= dog_fields.text_field :name, class: "form-control", placeholder: "dog name" %>
+  </div>
 
+  <div class="field form-group">
   <%= dog_fields.label :breed %>
-<%= dog_fields.text_field :breed %>
+  <%= dog_fields.text_field :breed, class: "form-control", placeholder: "dog breed"  %>
+  </div>
 
+  <div class="field form-group">
   <%= dog_fields.label :age %>
-  <%= dog_fields.number_field :age %>
+  <%= dog_fields.number_field :age, class: "form-control", placeholder: "dog age"  %>
+  </div>
 
-   <%= dog_fields.label :owner %>
-  <%= dog_fields.text_field :owner %>
+  <div class="field form-group">
+   <%= dog_fields.label :owner_id %>
+  <%= dog_fields.collection_select :owner_id, Owner.all, :id, :name, class: "form-control" %>
+  </div>
 
-  <%= dog_fields.submit %>
+
+  <div class="actions">
+    <%= dog_fields.submit class: "btn btn-secondary" %>
+  </div>
 
   <% end %>
+  </form>

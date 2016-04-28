@@ -13,3 +13,27 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap";
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch|Sniglet);
+
+body {
+  margin: 25px;
+  background-color: #ccfff5;
+}
+
+h1 {
+  font-family: 'Cabin Sketch', cursive;
+  color: #37f;
+  text-align: center;
+}
+
+.actions {
+  padding: 10px;
+}
+
+.linking {
+  font-family: 'Sniglet', cursive;
+  color: #c6f;
+  font-size: 1.4em;
+}
